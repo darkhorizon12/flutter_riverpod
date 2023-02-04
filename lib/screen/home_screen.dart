@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_status/layout/default_layout.dart';
+import 'package:flutter_status/screen/code_generation_screen.dart';
 import 'package:flutter_status/screen/family_modifier_screen.dart';
 import 'package:flutter_status/screen/future_provider_screen.dart';
 import 'package:flutter_status/screen/listen_provider_screen.dart';
+import 'package:flutter_status/screen/select_provider_screen.dart';
 import 'package:flutter_status/screen/state_notifier_provider_screen.dart';
 import 'package:flutter_status/screen/state_provider_screen.dart';
 import 'package:flutter_status/screen/stream_provider_screen.dart';
 
 import 'auto_dispose_modifier_screen.dart';
+import 'provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -73,6 +76,30 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('ListenProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => SelectProviderScreen()),
+              );
+            },
+            child: Text('SelectProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => ProviderScreen()),
+              );
+            },
+            child: Text('ProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => CodeGenerationScreen()),
+              );
+            },
+            child: Text('CodeGenerationScreen'),
           ),
         ],
       ),

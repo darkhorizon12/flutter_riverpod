@@ -31,3 +31,13 @@ samples, guidance on mobile development, and a full API reference.
 * ref.read
   * 실행하는 순간 단 한번만 provider 값을 가져옴
   * onPressed 콜백처럼 특정 액션 뒤에 실행하는 함수 내부에서 사용
+
+### riverpod 2.x 버전 업그레이드 후 code 생성기 사용
+* dependencies: 
+  * flutter_riverpod: ^2.1.3
+  * riverpod_annotation: ^1.1.1
+* dev_dependencies
+  * build_runner;
+  * riverpod_generator: ^1.1.1
+
+* 코드 빌드: flutter pub run build_runner build
